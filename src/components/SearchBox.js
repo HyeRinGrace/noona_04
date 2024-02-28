@@ -36,5 +36,5 @@ const SearchBox = () => {
     </div>
   );
 };
-//
+//Form에다가 onSubmit해줘야함 Label에다가 하면 안됨
 export default SearchBox;
