@@ -18,7 +18,7 @@ const ContactList = () => {
   return (
     <div>
       <SearchBox />
-      <div className="contact-list">
+      <div className="contact-list" style={{margin:'30px'}}>
         {filteredList.length} 명
         {filteredList.map((item, index) => (
           <ContactItem item={item} key={index} />
