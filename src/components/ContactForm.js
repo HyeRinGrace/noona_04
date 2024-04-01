@@ -7,11 +7,12 @@ const ContactForm = () => {
 
     let [name,setName] = useState('');
     let [phoneNumber,setPhoneNumber] = useState(0);
+    let [nickName,setNickName] = useState('');
     let dispatch = useDispatch();
 
     const addContact = (event) =>{
         event.preventDefault();
-        dispatch({type:"ADD_USER_INFO", payload:{name:name, phoneNumber:phoneNumber}})
+        dispatch({type:"ADD_USER_INFO", payload:{name:name, phoneNumber:phoneNumber ,nickName:nickName}})
 
     }
 
@@ -29,8 +30,13 @@ const ContactForm = () => {
         <Form.Control type="number" placeholder="전화번호를 입력해주세요" onChange={(event) => setPhoneNumber(event.target.value)} />
       </Form.Group>
 
+      <Form.Group className="mb-3" controlId="formNickName">
+        <Form.Label>닉네임</Form.Label>
+        <Form.Control type="text" placeholder="별명을 입력해주세요" onChange={(event) => setNickName(event.target.value)} />
+      </Form.Group>
+
       <Button variant="warning" type="submit">
-        Add
+        추가
       </Button>
     </Form>
   );

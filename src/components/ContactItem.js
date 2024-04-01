@@ -3,6 +3,8 @@ import {Row,Col} from 'react-bootstrap';
 import '../App.css';
 
 const ContactItem = ({item}) => {
+
+    console.log(item);
   return (
     <Row className='ItemBox' >
         <Col lg = {2}>
@@ -11,10 +13,16 @@ const ContactItem = ({item}) => {
         <Col lg = {10}>
             <div>
                 {item.name}
+                <span style={{
+                    fontSize:'13px',
+                    margin:'50px',
+                    color:'green',
+                }}>{item.nickName}</span>
             </div>
             <div>
                 {item.phoneNumber}
             </div>
+
         </Col>
     </Row>
   )

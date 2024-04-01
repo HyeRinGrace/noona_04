@@ -12,6 +12,7 @@ const reducer = (state =initialState,action) =>{
                     {
                         name:payload.name,
                         phoneNumber:payload.phoneNumber,
+                        nickName:payload.nickName
                     },
                 ],
             };
